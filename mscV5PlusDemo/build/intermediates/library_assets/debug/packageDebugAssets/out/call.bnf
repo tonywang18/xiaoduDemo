@@ -1,0 +1,12 @@
+#BNF+IAT 1.0 UTF-8;
+!grammar call;
+!slot <contact>;
+!slot <callPre>;
+!slot <callPhone>;
+!slot <callTo>;
+!start <callStart>;
+<callStart>:[<callPre>][<callTo>]<contact><callPhone>|[<callPre>]<callPhone>[<callTo>]<contact>;
+<contact>:空调|窗帘|电视|灯光;
+<callPre>:我要|我想|请;
+<callPhone>:打开|关闭;
+<callTo>:给;

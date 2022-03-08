@@ -1,0 +1,4 @@
+<resources>
+
+    <style name="Theme.XiaoduDemo" parent="android:Theme.Black" />
+</resources>

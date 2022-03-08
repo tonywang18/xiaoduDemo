@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#131929"
+    android:orientation="vertical"
+    tools:context=".WeatherActivity">
+
+    <EditText
+        android:id="@+id/putin"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:hint="请输入目标城市" />
+
+    <Button
+        android:id="@+id/send_request"
+        android:layout_width="311dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@mipmap/chaxun"
+        android:text=" " />
+    <Button
+        android:id="@+id/weather_back_btn"
+        android:layout_width="311dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@mipmap/chaxun"
+        android:text="返回" />
+
+    <TextView
+        android:id="@+id/response"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00000000"
+        android:textColor="#00000000"
+        android:hint=" " />
+
+    <EditText
+        android:id="@+id/City"
+        android:layout_width="686dp"
+        android:layout_height="104dp"
+        android:textColor="@color/white"
+        android:layout_marginTop="20dp"
+        android:textColorHint="@color/white"
+        android:background="@mipmap/alarmlist"
+        android:textSize="25dp"
+        android:hint="佛山" />
+
+    <EditText
+        android:id="@+id/Weather"
+        android:layout_width="686dp"
+        android:layout_height="104dp"
+        android:textColor="@color/white"
+        android:layout_marginTop="20dp"
+        android:textColorHint="@color/white"
+        android:background="@mipmap/alarmlist"
+        android:textSize="25dp"
+        android:hint="晴" />
+
+    <EditText
+        android:id="@+id/Temperature"
+        android:layout_width="686dp"
+        android:layout_height="104dp"
+        android:textColor="@color/white"
+        android:layout_marginTop="20dp"
+        android:textColorHint="@color/white"
+        android:background="@mipmap/alarmlist"
+        android:textSize="25dp"
+        android:hint="30" />
+
+</LinearLayout>

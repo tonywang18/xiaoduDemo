@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.gidisoft.paul.sdk">
+    <!--知心获得网络权限-->
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM"/>
+
+
+    <!--    &lt;!&ndash;如需使用人脸识别，还要添加：摄相头权限，拍照需要用到 &ndash;&gt;-->
+<!--    <uses-permission android:name="android.permission.CAMERA" />-->
+<!--    &lt;!&ndash; camera &ndash;&gt;-->
+<!--    <uses-permission android:name="android.permission.CAMERA" /> &lt;!&ndash; sdcard &ndash;&gt;-->
+<!--    <uses-permission android:name="android.permission.READ_PHONE_STATE" />-->
+<!--    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> &lt;!&ndash; wifi internet &ndash;&gt;-->
+
+    <application
+        android:name="com.gidisoft.paul.sdk.XdApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        tools:replace="android:icon">
+<!--        <receiver android:name="com.gidisoft.paul.sdk.alarm.RepeatingAlarm" android:process=":remote"/>-->
+
+        <activity android:name="com.gidisoft.paul.sdk.PermissionAcitivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.gidisoft.paul.sdk.face.RegisterActivity"></activity>
+        <activity android:name="com.gidisoft.paul.sdk.face.DetecterActivity"></activity>
+        <activity android:name="com.gidisoft.paul.sdk.XdMainActivity"></activity>
+        <activity android:name="com.gidisoft.paul.sdk.NavActivity" android:parentActivityName=".XdMainActivity"/>
+        <activity android:name="com.gidisoft.paul.sdk.alarm.AlarmActivity"/>
+        <activity android:name="com.gidisoft.paul.sdk.alarm.TimeActivity" />
+        <activity android:name="com.gidisoft.paul.sdk.WeatherActivity" />
+
+        <receiver android:name="com.gidisoft.paul.sdk.alarm.RepeatingAlarm">
+            <intent-filter>
+                <action android:name="com.gidi.xiaodu.alarm" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>
